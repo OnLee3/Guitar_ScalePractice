@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.guitar {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  background-color: cyan;
+  display: flex;
+  flex-direction: row;
+  align-items: fl;
+  width: 1000px;
+}
+
+.note {
+  background-color: brown;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  width: 20%;
+  height: 20px;
+  border-right-color: cornsilk;
+  border-right-width: 3px;
+}
