@@ -12,7 +12,7 @@ return audio
 
 for (let i=0; i<note.length; i++){
 note[i].addEventListener("click", (e)=>{
-    const audio = findAudio(i);
+    const audio = findAudio(i+2);
     if (audio.paused) audio.play();
     else {
         audio.currentTime = 0
