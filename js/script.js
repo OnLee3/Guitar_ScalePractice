@@ -1,17 +1,23 @@
-const guitar = document.querySelector(".guitar");
-console.log(guitar);
-const column = guitar.querySelector(".column");
-console.log(column);
+/*중요한 건, 클릭한 구역에 따라 다른 사운드를 출력하고, 기존 사운드의 출력을 멈추는 거다.
+핵심 기능 구현 후, 디자인 디테일을 추가하자.*/
+
 //array 형태
-const note = column.getElementsByClassName("note")
+const note = document.getElementsByClassName("note")
 console.log(note);
 
-const audio = new Audio("sound/test.mp3");
-console.log(audio);
-
-function test(e){
-    alert("Hi");
-    audio.play();
+function findAudio (i){
+const audio = new Audio(`sound/test${i}.wav`);
+return audio
 }
 
-note[0].addEventListener("click", test);
+for (let i=0; i<note.length; i++){
+note[i].addEventListener("click", (e)=>{
+    const audio = findAudio(i);
+    if (audio.paused) audio.play();
+    else {
+        audio.currentTime = 0
+    }
+    console.log(e);
+    console.log(`It's ${i}`)
+});
+}
