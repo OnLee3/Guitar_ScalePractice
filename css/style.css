@@ -1,4 +1,5 @@
 body {
+  background-color: cadetblue;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -12,20 +13,32 @@ body {
 }
 
 .column {
-  background-color: cyan;
   display: flex;
-  flex-direction: row;
-  align-items: fl;
   width: 1000px;
 }
 
 .note {
+  position: relative;
+  width: 20%;
+  height: 20px;
   background-color: brown;
   border-style: solid;
   border-color: black;
-  border-width: 1px;
-  width: 20%;
-  height: 20px;
+  border-bottom-width: 3px;
+  border-right-style: groove;
   border-right-color: cornsilk;
   border-right-width: 3px;
+}
+
+.column:last-child .note {
+  border-bottom: none;
+}
+
+.string {
+  background-color: none;
+  position: absolute;
+  z-index: 1;
+  width: 105%;
+  height: 20px;
+  bottom: -10px;
 }
