@@ -1,5 +1,5 @@
 body {
-  background-color: cadetblue;
+  background-color: #c6c3f3;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -12,7 +12,8 @@ body {
   flex-direction: column;
 }
 
-.column {
+.fingerBoard {
+  background-color: #ec652b;
   display: flex;
   width: 1000px;
 }
@@ -21,24 +22,23 @@ body {
   position: relative;
   width: 20%;
   height: 20px;
-  background-color: brown;
   border-style: solid;
-  border-color: black;
+  border-color: #dbdbb1;
   border-bottom-width: 3px;
   border-right-style: groove;
   border-right-color: cornsilk;
   border-right-width: 3px;
 }
 
-.column:last-child .note {
+.fingerBoard:last-child .note {
   border-bottom: none;
 }
 
-.string {
+.clickBtn {
   background-color: none;
   position: absolute;
   z-index: 1;
   width: 105%;
-  height: 20px;
-  bottom: -10px;
+  height: 22px;
+  bottom: -12px;
 }
