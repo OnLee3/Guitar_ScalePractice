@@ -52,4 +52,9 @@ body {
   align-items: center;
 
   font-weight: 600;
+  color: white;
+}
+
+.selectedScale {
+  background-color: black;
 }
