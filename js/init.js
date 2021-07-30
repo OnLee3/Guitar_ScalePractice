@@ -5,10 +5,23 @@ const clickBtn = document.getElementsByClassName("clickBtn")
 
 //음계 설정
 const pitch = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
+const totalNote = note.length-15
+let currentKey = "C";
 let pentaPitch = ["G", "A", "C", "D", "E"];
 let majorPitch = ["G", "A", "B", "C", "D", "E", "F"];
 
 //select html 생성
+const keyBtn = document.createElement("select");
+const cKey = document.createElement("option");
+const dkey = document.createElement("option");
+const eKey = document.createElement("option");
+cKey.innerText = "C"
+dkey.innerText = "D"
+eKey.innerText = "E"
+keyBtn.appendChild(cKey);
+keyBtn.appendChild(dkey);
+keyBtn.appendChild(eKey);
+document.body.appendChild(keyBtn);
 const scaleBtn = document.createElement("select");
 const none = document.createElement("option");
 const penta = document.createElement("option");
