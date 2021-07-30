@@ -17,12 +17,15 @@ function changePitch(e){
         else if(changedIndex < 0) changedIndex += 12;
         return pitch[changedIndex];
     })
-    console.log(pentaPitch)
-    console.log(majorPitch)
     pentaPitch = changedPentaPitch
     majorPitch = changedMajorPitch
-    console.log(pentaPitch)
-    console.log(majorPitch)
+    paintScale(currentScale);
+}
+
+function changeScale(e){
+    const scale = e.target.value
+    currentScale = scale;
+    paintScale(currentScale);
 }
 
 function deleteSelectedScale(){
@@ -31,29 +34,27 @@ function deleteSelectedScale(){
     }
 }
 
-function scaleBtnHandler(){
-deleteSelectedScale();
-    if(scaleBtn.value === "Pentatonic Scale") {
-    for(let i=0; i<totalNote; i++){
-        for(let j=0; j<pentaPitch.length; j++){
-            if(clickBtn[i].innerText === pentaPitch[j]) clickBtn[i].classList.add("selectedScale");
-        }
-    }
-}
+function paintScale(scale){
+    deleteSelectedScale();
+    switch(scale){
+        case "Pentatonic Scale":
+            for(let i=0; i<totalNote; i++){
+                for(let j=0; j<pentaPitch.length; j++){
+                    if(clickBtn[i].innerText === pentaPitch[j]) clickBtn[i].classList.add("selectedScale");
+            }
+        }   break;
 
-else if(scaleBtn.value === "Major Scale") {
-deleteSelectedScale();
-    for(let i=0; i<totalNote; i++){
-        for(let j=0; j<majorPitch.length; j++){
-            if(clickBtn[i].innerText === majorPitch[j]) clickBtn[i].classList.add("selectedScale");
-        }
+        case "Major Scale":
+            for(let i=0; i<totalNote; i++){
+                for(let j=0; j<majorPitch.length; j++){
+                    if(clickBtn[i].innerText === majorPitch[j]) clickBtn[i].classList.add("selectedScale");
+            }
+        }   break;
+
     }
 }
-else deleteSelectedScale();
-};
 
 keyBtn.addEventListener("change", changePitch);
-scaleBtn.addEventListener("change", scaleBtnHandler);
-
+scaleBtn.addEventListener("change", changeScale);
 
 //코드톤 선택 시 해당 코드톤 색상 변경

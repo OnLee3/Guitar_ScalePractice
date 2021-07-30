@@ -8,6 +8,10 @@ body {
   align-items: center;
 }
 
+div.btnBox {
+  background-color: green;
+}
+
 .guitar {
   display: flex;
   flex-direction: column;
@@ -15,7 +19,7 @@ body {
 }
 
 .fingerBoard {
-  background-color: #ec652b;
+  background-color: rgb(150, 95, 95);
   display: flex;
   width: 1000px;
 }
@@ -25,21 +29,38 @@ body {
   width: 20%;
   height: 20px;
   border-style: solid;
-  border-color: #dbdbb1;
-  border-bottom-width: 3px;
+  border-color: lemonchiffon;
+  border-bottom-width: 2.5px;
   border-right-style: groove;
-  border-right-color: cornsilk;
+  border-right-color: lemonchiffon;
   border-right-width: 3px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.fingerBoard:last-child .note {
+.fingerBoard:first-child > .note {
+  border-bottom-width: 1.5px;
+}
+.fingerBoard:nth-child(2) > .note {
+  border-bottom-width: 1.5px;
+}
+.fingerBoard:nth-child(3) > .note {
+  border-bottom-width: 2px;
+}
+.fingerBoard:nth-child(4) > .note {
+  border-bottom-width: 2px;
+}
+.fingerBoard:nth-child(5) > .note {
+  border-bottom-width: 2.5px;
+}
+
+.fingerBoard:last-child > .note {
   border-bottom: none;
 }
 
 .clickBtn {
-  background-color: none;
+  cursor: pointer;
   position: absolute;
   z-index: 1;
   width: 50%;
@@ -51,10 +72,20 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-weight: 600;
-  color: white;
+  font-weight: bold;
+  color: rgb(31, 31, 31);
 }
 
 .selectedScale {
-  background-color: black;
+  background-color: mediumslateblue;
+  color: ivory;
+  border-color: ivory;
+}
+
+.whiteCircle {
+  background-color: rgb(129, 129, 129);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  z-index: 0;
 }
