@@ -10,9 +10,10 @@ function changePitch(key){
         return pitch[changedIndex];
     })
     console.log(pentaPitch)
-    console.log(changedPitch)
+    pentaPitch = changedPitch
+    console.log(pentaPitch)
 }
-changePitch("A#");
+changePitch("D");
 
 function deleteSelectedScale(){
     for(let i=0; i<(note.length-15); i++){
@@ -24,24 +25,18 @@ function scaleBtnHandler(){
 deleteSelectedScale();
     if(scaleBtn.value === "Pentatonic Scale") {
     for(let i=0; i<(note.length-15); i++){
-        if(clickBtn[i].innerText === "G" 
-        || clickBtn[i].innerText === "A"
-        || clickBtn[i].innerText === "C"
-        || clickBtn[i].innerText === "D"
-        || clickBtn[i].innerText === "E") clickBtn[i].classList.add("selectedScale");
+        for(let j=0; j<pentaPitch.length; j++){
+            if(clickBtn[i].innerText === pentaPitch[j]) clickBtn[i].classList.add("selectedScale");
+        }
     }
 }
 
 else if(scaleBtn.value === "Major Scale") {
 deleteSelectedScale();
     for(let i=0; i<(note.length-15); i++){
-        if(clickBtn[i].innerText === "G" 
-        || clickBtn[i].innerText === "A"
-        || clickBtn[i].innerText === "B"
-        || clickBtn[i].innerText === "C"
-        || clickBtn[i].innerText === "D"
-        || clickBtn[i].innerText === "E"
-        || clickBtn[i].innerText === "F") clickBtn[i].classList.add("selectedScale");
+        for(let j=0; j<majorPitch.length; j++){
+            if(clickBtn[i].innerText === majorPitch[j]) clickBtn[i].classList.add("selectedScale");
+        }
     }
 }
 else deleteSelectedScale();

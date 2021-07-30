@@ -5,8 +5,8 @@ const clickBtn = document.getElementsByClassName("clickBtn")
 
 //음계 설정
 const pitch = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
-const pentaPitch = ["G", "A", "C", "D", "E"];
-const majorPitch = ["G", "A", "B", "C", "D", "E", "F"];
+let pentaPitch = ["G", "A", "C", "D", "E"];
+let majorPitch = ["G", "A", "B", "C", "D", "E", "F"];
 
 //select html 생성
 const scaleBtn = document.createElement("select");
