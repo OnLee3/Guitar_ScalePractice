@@ -77,13 +77,14 @@ div.btnBox {
 }
 
 .selectedScale {
+  transition: all 0.3s linear;
   background-color: mediumslateblue;
   color: ivory;
   border-color: ivory;
 }
 
 .whiteCircle {
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(161, 161, 161);
   height: 20px;
   width: 20px;
   border-radius: 50%;
