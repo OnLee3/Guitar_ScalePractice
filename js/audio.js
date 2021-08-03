@@ -1,6 +1,6 @@
 //Audio 기능
 function findAudio (i){
-    const audio = new Audio(`sound/test${i}.wav`);
+    const audio = new Audio(`sound/test ${i}.flac`);
     return audio
     }
 
