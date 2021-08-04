@@ -1,3 +1,5 @@
+![스크린샷 2021-08-04 오후 10 59 32](https://user-images.githubusercontent.com/83897458/128194166-dc5725c7-0795-43fd-94f8-da7ffd9dec03.png)
+
 ## 만들게 된 계기
 
 최근 기타를 배우고 있습니다.
