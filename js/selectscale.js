@@ -50,11 +50,9 @@ function paintScale(scale){
                     if(clickBtn[i].innerText === majorPitch[j]) clickBtn[i].classList.add("selectedScale");
             }
         }   break;
-
     }
 }
 
-keyBtn.addEventListener("change", changePitch);
-scaleBtn.addEventListener("change", changeScale);
+
 
 //코드톤 선택 시 해당 코드톤 색상 변경
